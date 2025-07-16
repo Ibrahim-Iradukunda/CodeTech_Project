@@ -5,7 +5,7 @@
 // Each function handles a specific API endpoint and includes proper error handling.
 
 // Base URL for the backend API server
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+export const API_URL = "http://localhost:8000";
 
 // =============================================================================
 // AUTHENTICATION API FUNCTIONS
