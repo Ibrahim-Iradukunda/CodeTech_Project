@@ -5,7 +5,7 @@
 // Each function handles a specific API endpoint and includes proper error handling.
 
 // Base URL for the backend API server
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+export const API_URL = "http://localhost:8000";
 
 // =============================================================================
 // AUTHENTICATION API FUNCTIONS
@@ -17,11 +17,11 @@ export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000
  * @param password - User's password
  * @returns Promise with user data
  */
-export async function signup({ email, password }: { email: string; password: string }) {
+export async function signup({ name, email, password }: { name: string; email: string; password: string }) {
     const res = await fetch(`${API_URL}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ name, email, password }),
     });
     if (!res.ok) throw new Error((await res.json()).detail || "Signup failed");
     return res.json();
