@@ -328,15 +328,15 @@ export default function HomePage() {
               <ul className="space-y-2 text-slate-400 text-sm">
                 <li>Gaddiel Irakoze - Product Owner</li>
                 <li>Adeodatus Nkundimana - Developer</li>
-                <li>Mohammed Ahmed Khalid - DevOps</li>
-                <li>Iradukunda Ibrahim - Scrum Master</li>
-                <li>Elvin Cyubahiro - QA Tester</li>
                 <li>Effiong Uyo - UX Designer</li>
+                <li>Ahmed Khalid - DevOps</li>
+                <li>Elvin Cyubahiro - QA Tester</li>
+                <li>Iradukunda Ibrahim - Scrum Master</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 CodeTech. Built by ALU Software Engineering Students.</p>
+            <p>&copy; 2025 CodeTech. Built by ALU Software Engineering Students.</p>
           </div>
         </div>
       </footer>
