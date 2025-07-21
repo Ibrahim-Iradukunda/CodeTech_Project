@@ -4,7 +4,8 @@
 // This file contains all the API functions that communicate with the backend server.
 // Each function handles a specific API endpoint and includes proper error handling.
 
-export const API_URL = "https://codetech-bckend.onrender.com";
+// Base URL for the backend API server
+export const API_URL = "http://localhost:8000";
 
 // =============================================================================
 // AUTHENTICATION API FUNCTIONS
@@ -396,7 +397,7 @@ export async function resetUserProgress(userId: number, token: string) {
 
 // Fetch platform-wide stats for homepage
 export async function getPlatformStats() {
-    const res = await fetch(`${API_URL}/platform-stats`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/platform-stats`);
     if (!res.ok) throw new Error("Failed to fetch platform stats");
     return res.json();
 } 
