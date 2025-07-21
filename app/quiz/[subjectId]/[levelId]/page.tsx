@@ -139,13 +139,13 @@ export default function QuizPage() {
         setScore(res.score)
         setCorrectCount(res.correct)
         setResult(res)
-        // Redirect to subject page to refresh progress
-        router.push(`/subject/${subjectId}`)
+        // Do NOT redirect here; show results screen instead
+        // router.push(`/subject/${subjectId}`)
       }
     } catch (err) {
       console.error("Error completing quiz:", err)
-      // Still redirect even if submission fails
-      router.push(`/subject/${subjectId}`)
+      // Do NOT redirect here; show error on results screen
+      // router.push(`/subject/${subjectId}`)
     }
   }
 
@@ -286,7 +286,7 @@ export default function QuizPage() {
                 <Button
                   variant="outline"
                   className="w-full bg-transparent flex-1"
-                  onClick={() => window.location.href = `/subject/${subjectId}`}
+                  onClick={() => router.push(`/subject/${subjectId}`)}
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Subject
