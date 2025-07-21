@@ -68,8 +68,7 @@ export default function SignUpPage() {
     }
 
     try {
-      const user = await signup({ name: formData.name, email: formData.email, password: formData.password })
-      console.log('Signed up user:', user)
+      await signup({ name: formData.name, email: formData.email, password: formData.password })
       // On success, redirect to login page
       router.push("/login")
     } catch (err: any) {
