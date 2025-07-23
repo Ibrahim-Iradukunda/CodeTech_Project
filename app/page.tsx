@@ -345,7 +345,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 CodeTech. Built by ALU Software Engineering Students.</p>
+            <p>&copy; 2025 CodeTech. Built by ALU Software Engineering Students.</p>
           </div>
         </div>
       </footer>
